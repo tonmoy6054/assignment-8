@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import SingleData from '../SingleData/SingleData';
 
 const Card = () => {
     const [data,setData] = useState([]);
@@ -6,17 +7,23 @@ const Card = () => {
 const loadData = async() => {
     const res = await fetch(`http://localhost:3000/users`);
     const data = await res.json();
-    console.log(data);
-
+    // console.log(data);
+    setData(data);
 }
 loadData();
     }
 
     ,[])
+    // console.log(data);
     return (
-        <div>
-            
-        </div>
+        <>
+           {
+            data.map((singleData) => {
+                // console.log(singleData);
+                return <SingleData singleData={singleData}/>;
+            })
+           } 
+        </>
     );
 };
 
