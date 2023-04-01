@@ -24,6 +24,7 @@ return (
                 return <SingleData 
                 singleData={singleData}
                 handleWatchTime={handleWatchTime}
+                // handleWatchTime={handleWatchTime}
                 />;
             })
            }

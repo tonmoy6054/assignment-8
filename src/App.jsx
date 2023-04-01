@@ -7,7 +7,7 @@ import SideCard from './components/SideCard/SideCard';
 import Ques from './components/Ques/Ques';
 
 function App() {
-  const [watchTime, setWatchTime] = useState(0);
+  const [watchTime, setWatchTime] = useState("");
 
   const handleWatchTime = (time) => {
     const previousWatchTime = JSON.parse(localStorage.getItem("watchTime"));
@@ -20,6 +20,7 @@ function App() {
       setWatchTime(time);
     }
   };
+  
 
 
 
@@ -36,6 +37,7 @@ function App() {
           <SideCard watchTime={watchTime}></SideCard>
         </div>
       </div>
+    
       <Ques></Ques>
     </div>
   );
