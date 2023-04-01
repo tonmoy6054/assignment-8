@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SideCard = () => {
+const SideCard = ({watchTime}) => {
     
     return  (   
     <div>
