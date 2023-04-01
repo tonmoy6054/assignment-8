@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import SingleData from '../SingleData/SingleData';
 
-const Card = () => {
+
+const Card = ({handleWatchTime}) => {
     const [data,setData] = useState([]);
     useEffect(() => {
 const loadData = async() => {
@@ -12,19 +13,33 @@ const loadData = async() => {
 }
 loadData();
     }
-
+    
     ,[])
     // console.log(data);
+    
+
+
+
+
     return (
         <>
            {
             data.map((singleData) => {
                 // console.log(singleData);
-                return <SingleData singleData={singleData}/>;
+                return <SingleData singleData={singleData}
+                handleWatchTime={handleWatchTime}/>;
             })
-           } 
+           }
+          
         </>
+      
+
+      
+
+
+
     );
+      
 };
 
 export default Card;
