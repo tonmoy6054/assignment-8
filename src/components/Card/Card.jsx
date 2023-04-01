@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SingleData from '../SingleData/SingleData';
 
-
 const Card = ({handleWatchTime}) => {
     const [data,setData] = useState([]);
     useEffect(() => {
@@ -17,27 +16,20 @@ loadData();
     ,[])
     // console.log(data);
     
-
-
-
-
-    return (
+return (
         <>
            {
             data.map((singleData) => {
                 // console.log(singleData);
-                return <SingleData singleData={singleData}
-                handleWatchTime={handleWatchTime}/>;
+                return <SingleData 
+                singleData={singleData}
+                handleWatchTime={handleWatchTime}
+                />;
             })
            }
           
         </>
-      
-
-      
-
-
-
+  
     );
       
 };
