@@ -2,14 +2,15 @@ import React from 'react';
 
 
 
-const SingleData = ({singleData,handleWatchTime}) => {
-    // console.log(singleData);
-    const { image, id, title, name, published_in, minute, personImage } = singleData;
+const SingleData = ({data,handleWatchTime}) => {
+    console.log(data);
+    const { image, id, title, name, published_in, minute, personImage } = users;
+    console.log(users);
     return (
       // <div className="flex justify-around">
         <div className="mt-5">
           <div className="card w-96 bg-base-100 shadow-xl pl-5">
-  <figure><img src= {image} alt="Shoes" /></figure>
+  <figure><img src= {users.image} alt="Shoes" /></figure>
   <div className="card-body">
     <div className="flex">
     <img src={personImage} className="h-12 w-12 object-contain"></img>
