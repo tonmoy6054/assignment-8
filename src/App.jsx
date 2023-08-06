@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Header from './components/Header/Header';
 import Card from './components/Card/Card';
 import SingleData from './components/SingleData/SingleData';
-import SideCard from './components/SideCard/SideCard';
+// import SideCard from './components/SideCard/SideCard';
 import Ques from './components/Ques/Ques';
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
           <Card handleWatchTime={handleWatchTime}></Card>
         </div>
         <div>
-          <SideCard watchTime={watchTime}></SideCard>
+          {/* <SideCard watchTime={watchTime}></SideCard> */}
         </div>
       </div>
     
